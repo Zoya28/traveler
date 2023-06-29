@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traveler</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="icon" href="images/logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Poppins:wght@100;400&family=Tsukimi+Rounded&display=swap"
+        rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            padding: 0px;
+        }
+
+        .logo {
+            margin: 0px;
+            padding: 5px;
+        }
+
+        .logo img {
+            width: 15vh;
+            height: 12vh;
+        }
+
+        .link-color a {
+            color: rgb(255, 255, 255);
+            text-transform: capitalize;
+            transition: 0.3s;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            opacity: 0;
+            animation: topdown 1s ease forwards;
+            animation-delay: calc(.2s*var(--i));
+            margin: 20px;
+        }
+
+        .link-color a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(195, 0, 255);
+            border-radius: 10px 20px;
+        }
+
+        @keyframes topdown {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .nav ul li a:hover {
+            background-color: yellow !important;
+            color: black;
+            border-radius: 10px 20px;
+        }
+
+        .navbar form button {
+            color: black;
+            background-color: yellow;
+        }
+
+        .navbar form button:hover {
+            color: black;
+            background-color: rgb(218, 253, 61);
+        }
+
+        /*  {
+            width: 100%;
+            height: 87vh;
+        } */
+
+        .carousel-inner::after {
+            content: "";
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.541);
+            z-index: 1;
+        }
+
+        h1 {
+            text-transform: capitalize;
+        }
+
+        .slider {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            z-index: -1;
+        }
+
+        .logo h1 {
+            color: white;
+        }
+
+        .logo h1 span {
+            color: yellow;
+            font-family: 'Dancing Script', cursive;
+        }
+        .containt{
+            color: white;
+            text-align: center;
+            padding-top: 150px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .containt h5{
+            font-size: 38px;
+            font-weight: 500;
+            text-shadow: 2px 2px 6px black;
+        }
+        .containt h1{
+            font-size: 70px;
+            font-weight: 600;
+            text-shadow: 2px 2px 6px black;
+            margin-top: 5px ;
+            margin-bottom: 10px;
+            font-family: 'Dancing Script', cursive;
+        }
+        .containt a{
+            padding: 10px;
+            background-color: white;
+            color: black;
+            letter-spacing: 2px;
+            font-weight: 550;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.5s;
+            text-transform: capitalize;
+            margin-top: 20px;
+        }
+        .containt a:hover{
+            color: black;
+            background-color: yellow;
+        }
+        .containt h4{
+            padding-bottom: 26px;
+        }
+        .changecontent::after{
+            content: '';
+            color: yellow;
+            text-shadow: 0px 1px 5px black;
+            animation: changetxt 20s infinite linear;
+        }
+        @keyframes changetxt{
+            0%{content: 'india';}
+            10%{content: 'germany';}
+            20%{content: 'france';}
+            30%{content: 'spain';}
+            40%{content: 'china';}
+            50%{content: 'italy';}
+            60%{content: 'europe';}
+            70%{content: 'dubai';}
+            80%{content: 'united state';}
+            90%{content: 'turkey';}
+            100%{content: 'new zeland';}
+        }
+        </style>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <!-- navbar -->
+            <div class="navbar navbar-expand-lg bg-body-tertiary ">
+                <div class="container">
+                    <a class="logo navbar-brand" href="#">
+                        <h1>Trav<span>ler</span></h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class=" nav collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 text-center">
+                            <li class="link-color nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="link-color nav-item">
+                                <a class="nav-link" href="#">book</a>
+                            </li>
+                            <li class="link-color nav-item">
+                                <a class="nav-link" href="#">offers</a>
+                            </li>
+                            <li class="link-color nav-item">
+                                <a class="nav-link" href="#">services</a>
+                            </li>
+                            <li class="link-color nav-item">
+                                <a class="nav-link" href="#">contact</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- navbar ends -->
+        </header>
+        <!-- slider section -->
+        <div id="carouselExampleSlidesOnly" class="slider carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/castle1.jpg" class="d-block w-100" alt="castle">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/p1.jpg" class="d-block w-100" alt="none">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/p2.jpg" class="d-block w-100" alt="none">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/p3.jpg" class="d-block w-100" alt="none">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/p4.jpg" class="d-block w-100" alt="none">
+                </div>
+            </div>
+        </div>
+        <!-- slider ends -->
+        <section class="home my-5">
+            <div class="containt">
+                <h5>Welcome to the Traveler</h5>
+                <h1>visit <span class="changecontent"></span></h1>
+                <h4>find your dream destination</h4>
+                <a href="#">book now</a>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
